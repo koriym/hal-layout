@@ -2,7 +2,7 @@
 
 A declarative React component library for rendering HAL (Hypertext Application Language) resources.
 
-**[Demo](./demo)** | **[API Reference](#api-reference)**
+**[Live Demo](https://koriym.github.io/hal-layout/)** | **[Demo Source](./demo)** | **[API Reference](#api-reference)**
 
 ## Concept
 
