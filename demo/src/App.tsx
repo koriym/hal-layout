@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { HalProvider, Hal, HalEmbedded, HalLink, useHypermedia } from 'hal-layout';
 import { createMockClient } from './mockServer';
 
@@ -6,8 +5,6 @@ import { createMockClient } from './mockServer';
 const mockClient = createMockClient();
 
 function App() {
-  const [searchQuery, setSearchQuery] = useState('');
-
   return (
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     <HalProvider baseUrl="http://localhost:3000" client={mockClient as any}>
@@ -17,19 +14,6 @@ function App() {
       <HalJsonPreview />
 
       <h2>Rendered UI</h2>
-
-      {/* Search with URI template */}
-      <div className="search-form">
-        <input
-          type="text"
-          placeholder="Search posts..."
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-        />
-        <HalLink rel="search" params={{ q: searchQuery }}>
-          Search
-        </HalLink>
-      </div>
 
       <Hal uri="/posts/1" fallback={<div className="loading">Loading...</div>}>
         <PostDetail />
