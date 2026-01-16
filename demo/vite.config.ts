@@ -6,6 +6,8 @@ export default defineConfig({
   resolve: {
     alias: {
       'hal-layout': path.resolve(__dirname, '../src/index.ts'),
+      'react': path.resolve(__dirname, 'node_modules/react'),
+      'react-dom': path.resolve(__dirname, 'node_modules/react-dom'),
     },
   },
   esbuild: {
